@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2;
+    padding: 10px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+}
+
+.register-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    min-height: 700px;
+}
+
+/* Left Side */
+.register-left {
+    flex: 1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.logo p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.illustration {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.illustration i.fa-ticket-alt {
+    font-size: 100px;
+    opacity: 0.2;
+    margin-bottom: 20px;
+}
+
+.illustration h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.illustration p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.features {
+    list-style: none;
+    text-align: left;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.features li {
+    padding: 12px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.features li i {
+    margin-right: 12px;
+    color: #4ade80;
+    font-size: 18px;
+}
+
+/* Right Side */
+.register-right {
+    flex: 1;
+    padding: 60px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-box {
+    width: 100%;
+    max-width: 450px;
+}
+
+.register-box h2 {
+    font-size: 32px;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.subtitle a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.subtitle a:hover {
+    text-decoration: underline;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.alert i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alert-success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group label i {
+    margin-right: 6px;
+    color: #667eea;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.password-input {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #9ca3af;
+    transition: color 0.3s;
+}
+
+.toggle-password:hover {
+    color: #667eea;
+}
+
+.password-hint {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.checkbox-group {
+    margin: 25px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-label span {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.checkbox-label a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn-register {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-register i {
+    margin-right: 8px;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-register:active {
+    transform: translateY(0);
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.divider span {
+    background: white;
+    padding: 0 15px;
+    color: #9ca3af;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-social {
+    flex: 1;
+    padding: 14px;
+    border: 2px solid #e5e7eb;
+    background: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-social i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.btn-google {
+    color: #ea4335;
+}
+
+.btn-google:hover {
+    background: #ea4335;
+    color: white;
+    border-color: #ea4335;
+}
+
+.btn-facebook {
+    color: #1877f2;
+}
+
+.btn-facebook:hover {
+    background: #1877f2;
+    color: white;
+    border-color: #1877f2;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .register-container {
+        flex-direction: column;
+    }
+
+    .register-left {
+        padding: 40px 30px;
+    }
+
+    .illustration i.fa-ticket-alt {
+        font-size: 60px;
+    }
+
+    .illustration h2 {
+        font-size: 24px;
+    }
+
+    .features {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+
+    .register-right {
+        padding: 40px 30px;
+    }
+
+    .register-box h2 {
+        font-size: 26px;
+    }
+
+    .social-login {
+        flex-direction: column;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+}
