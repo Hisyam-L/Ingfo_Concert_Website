@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 26, 2025 at 05:57 AM
+-- Generation Time: Oct 26, 2025 at 08:38 AM
 -- Server version: 8.0.43-0ubuntu0.24.04.2
 -- PHP Version: 8.3.6
 
@@ -133,36 +133,36 @@ CREATE TABLE `Artis` (
 --
 
 INSERT INTO `Artis` (`id_artis`, `nama_artis`, `genre`, `asal_negara`, `gambar_artis`, `tipe_entitas`) VALUES
-('A01', 'HYDE', 'J-Rock', 'Jepang', '', 'Artis Solo (Vokalis/Musisi)'),
-('A02', 'Ryokuoushoku Shakai', 'J-Pop, Pop Rock', 'Jepang', '', 'Grup Band (J-Pop/Rock)'),
-('A03', 'Hatsune Miku', 'Vocaloid, J-Pop', 'Jepang', '', 'Entitas Virtual'),
-('A04', 'L’Impératrice', 'Disco-pop', 'Prancis', '', 'Grup Band (Nu-Disco/Pop)'),
-('A05', 'TV Girl', 'Indie Pop', 'AS', '', 'Grup Band (Indie Pop)'),
-('A06', 'Bright Eyes', 'Indie Rock', 'AS', '', 'Grup Band (Indie Folk)'),
-('A07', 'Calvin Harris', 'Dance, Pop', 'Inggris', '', 'Artis Solo (DJ/Produser)'),
-('A08', 'Charlotte De Witte', 'Techno', 'Belgia', '', 'Artis Solo (DJ/Produser)'),
-('A09', 'Fisher', 'Tech House', 'Australia', '', 'Artis Solo (DJ/Produser)'),
-('A10', 'HUGEL', 'Latin House', 'Prancis', '', 'Artis Solo (DJ/Produser)'),
-('A11', 'Skrillex', 'Dubstep, EDM', 'AS', '', 'Artis Solo (DJ/Produser)'),
-('A12', 'Steve Angello', 'Progressive House', 'Swedia', '', 'Artis Solo (DJ/Produser)'),
-('A13', 'RIIZE', 'K-Pop', 'Korea Selatan', '', 'Grup Idola K-Pop'),
-('A14', 'Carl Cox', 'Techno, House', 'Inggris', '', 'Artis Solo (DJ/Produser)'),
-('A15', 'Valery Meladze', 'Pop', 'Rusia', '', 'Artis Solo (Vokalis/Musisi)'),
-('A16', 'Dream Theater', 'Progressive Metal', 'AS', '', 'Grup Band (Progressive Metal)'),
-('A17', 'Michael Learns To Rock', 'Pop, Soft Rock', 'Denmark', '', 'Grup Band (Soft Rock)'),
-('A18', 'Jim Brickman', 'New Age, Pop', 'AS', '', 'Artis Solo (Vokalis/Musisi)'),
-('A19', 'Peabo Bryson', 'Soul, R&B', 'AS', '', 'Artis Solo (Vokalis/Musisi)'),
-('A20', 'Vina Panduwinata', 'Pop', 'Indonesia', '', 'Artis Solo (Vokalis/Musisi)'),
-('A21', 'Rita Effendy', 'Pop', 'Indonesia', '', 'Artis Solo (Vokalis/Musisi)'),
-('A22', 'aespa', 'K-Pop, Hyperpop', 'Korea Selatan', '', 'Grup Idola K-Pop'),
-('A23', 'Deep Purple', 'Hard Rock, Heavy Metal', 'Inggris', '', 'Grup Band (Hard Rock)'),
-('A24', 'Slank', 'Rock', 'Indonesia', '', 'Grup Band (Rock)'),
-('A25', 'My Chemical Romance', 'Alternative Rock', 'AS', '', 'Grup Band (Rock)'),
-('A26', 'Parkway Drive', 'Metalcore', 'Australia', '', 'Grup Band (Metalcore)'),
-('A27', 'New Found Glory', 'Pop Punk', 'AS', '', 'Grup Band (Pop-Punk)'),
-('A28', 'One Ok Rock', 'Rock, J-Rock', 'Jepang', '', 'Grup Band (J-Rock)'),
-('A29', 'NCT WISH', 'K-Pop', 'Korea Selatan/Jepang', '', 'Grup Idola K-Pop'),
-('A30', 'OneRepublic', 'Pop, Pop Rock', 'AS', '', 'Grup Band (Pop Rock)');
+('A01', 'HYDE', 'J-Rock', 'Jepang', 'band_pict/HYDE.webp', 'Artis Solo (Vokalis/Musisi)'),
+('A02', 'Ryokuoushoku Shakai', 'J-Pop, Pop Rock', 'Jepang', 'band_pict/Ryokuoushoku_Shaka.webp', 'Grup Band (J-Pop/Rock)'),
+('A03', 'Hatsune Miku', 'Vocaloid, J-Pop', 'Jepang', 'band_pict/hatsune_miku.webp', 'Entitas Virtual'),
+('A04', 'L’Impératrice', 'Disco-pop', 'Prancis', 'band_pict/L_Imperatrice.webp', 'Grup Band (Nu-Disco/Pop)'),
+('A05', 'TV Girl', 'Indie Pop', 'AS', 'band_pict/Tv_Girls.webp', 'Grup Band (Indie Pop)'),
+('A06', 'Bright Eyes', 'Indie Rock', 'AS', 'band_pict/Bright_Eyes.webp', 'Grup Band (Indie Folk)'),
+('A07', 'Calvin Harris', 'Dance, Pop', 'Inggris', 'band_pict/Calvin_Harris.webp', 'Artis Solo (DJ/Produser)'),
+('A08', 'Charlotte De Witte', 'Techno', 'Belgia', 'band_pict/Charlotte_De_Witte.webp', 'Artis Solo (DJ/Produser)'),
+('A09', 'Fisher', 'Tech House', 'Australia', 'band_pict/dj_fisher.webp', 'Artis Solo (DJ/Produser)'),
+('A10', 'HUGEL', 'Latin House', 'Prancis', 'band_pict/hugel.webp', 'Artis Solo (DJ/Produser)'),
+('A11', 'Skrillex', 'Dubstep, EDM', 'AS', 'band_pict/skrillex.webp', 'Artis Solo (DJ/Produser)'),
+('A12', 'Steve Angello', 'Progressive House', 'Swedia', 'band_pict/steve_angelo.webp', 'Artis Solo (DJ/Produser)'),
+('A13', 'RIIZE', 'K-Pop', 'Korea Selatan', 'band_pict/riize.webp', 'Grup Idola K-Pop'),
+('A14', 'Carl Cox', 'Techno, House', 'Inggris', 'band_pict/carl_cox.webp', 'Artis Solo (DJ/Produser)'),
+('A15', 'Valery Meladze', 'Pop', 'Rusia', 'band_pict/valery_meladze.webp', 'Artis Solo (Vokalis/Musisi)'),
+('A16', 'Dream Theater', 'Progressive Metal', 'AS', 'band_pict/dream_theater.webp', 'Grup Band (Progressive Metal)'),
+('A17', 'Michael Learns To Rock', 'Pop, Soft Rock', 'Denmark', 'band_pict/michael_learns_to_rock.webp', 'Grup Band (Soft Rock)'),
+('A18', 'Jim Brickman', 'New Age, Pop', 'AS', 'band_pict/jim_brickman.webp', 'Artis Solo (Vokalis/Musisi)'),
+('A19', 'Peabo Bryson', 'Soul, R&B', 'AS', 'band_pict/peabo_bryson.webp', 'Artis Solo (Vokalis/Musisi)'),
+('A20', 'Vina Panduwinata', 'Pop', 'Indonesia', 'band_pict/vina_panduwinata.webp', 'Artis Solo (Vokalis/Musisi)'),
+('A21', 'Rita Effendy', 'Pop', 'Indonesia', 'band_pict/rita_effendy.webp', 'Artis Solo (Vokalis/Musisi)'),
+('A22', 'aespa', 'K-Pop, Hyperpop', 'Korea Selatan', 'band_pict/aespa.webp', 'Grup Idola K-Pop'),
+('A23', 'Deep Purple', 'Hard Rock, Heavy Metal', 'Inggris', 'band_pict/deep_purple.webp', 'Grup Band (Hard Rock)'),
+('A24', 'Slank', 'Rock', 'Indonesia', 'band_pict/slank.webp', 'Grup Band (Rock)'),
+('A25', 'My Chemical Romance', 'Alternative Rock', 'AS', 'band_pict/my_chemical_romance.webp', 'Grup Band (Rock)'),
+('A26', 'Parkway Drive', 'Metalcore', 'Australia', 'band_pict/parkway_drive.webp', 'Grup Band (Metalcore)'),
+('A27', 'New Found Glory', 'Pop Punk', 'AS', 'band_pict/new_found_glory.webp', 'Grup Band (Pop-Punk)'),
+('A28', 'One Ok Rock', 'Rock, J-Rock', 'Jepang', 'band_pict/one_ok_rock.webp', 'Grup Band (J-Rock)'),
+('A29', 'NCT WISH', 'K-Pop', 'Korea Selatan/Jepang', 'band_pict/nct_wish.webp', 'Grup Idola K-Pop'),
+('A30', 'OneRepublic', 'Pop, Pop Rock', 'AS', 'band_pict/one_republic.webp', 'Grup Band (Pop Rock)');
 
 -- --------------------------------------------------------
 
