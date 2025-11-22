@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.1deb3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 15 Nov 2025 pada 11.12
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.2.12
+-- Host: localhost:3306
+-- Generation Time: Nov 22, 2025 at 01:05 PM
+-- Server version: 8.0.44-0ubuntu0.24.04.1
+-- PHP Version: 8.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,117 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `anggota_band`
---
-
-CREATE TABLE `anggota_band` (
-  `id_anggota` varchar(10) NOT NULL,
-  `id_artis` varchar(10) NOT NULL,
-  `nama_anggota` varchar(255) NOT NULL,
-  `peran` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `anggota_band`
---
-
-INSERT INTO `anggota_band` (`id_anggota`, `id_artis`, `nama_anggota`, `peran`) VALUES
-('M01', 'A22', 'Karina', 'Leader/Dancer'),
-('M02', 'A22', 'Giselle', 'Rapper'),
-('M03', 'A22', 'Winter', 'Vokalis/Visual'),
-('M04', 'A22', 'Ningning', 'Vokalis Utama'),
-('M05', 'A02', 'Haruko Nagaya', 'Vokalis/Gitaris'),
-('M06', 'A02', 'Issei Kobayashi', 'Gitaris'),
-('M07', 'A02', 'Peppe', 'Keyboardist'),
-('M08', 'A02', 'Shingo Anami', 'Bassist'),
-('M09', 'A04', 'Charles de Boisseguin', 'Keyboard'),
-('M10', 'A04', 'Hagni Gwon', 'Keyboard'),
-('M11', 'A04', 'David Gaugué', 'Bass'),
-('M12', 'A04', 'Achille Trocellier', 'Gitar'),
-('M13', 'A04', 'Tom Daveau', 'Drum'),
-('M14', 'A04', 'Louve', 'Vokal'),
-('M15', 'A05', 'Brad Petering', 'Vokalis Utama'),
-('M16', 'A05', 'Jason Wyman', 'Drummer'),
-('M17', 'A05', 'Wyatt Harmon', 'Keyboardist'),
-('M18', 'A06', 'Conor Oberst', 'Penulis Lagu/Vokalis'),
-('M19', 'A06', 'Mike Mogis', 'Produser/Multi-instrumentalis'),
-('M20', 'A06', 'Nate Walcott', 'Penggubah/Pianis'),
-('M21', 'A13', 'Shotaro', 'Tari'),
-('M22', 'A13', 'Eunseok', 'Vokal'),
-('M23', 'A13', 'Sungchan', 'Rap'),
-('M24', 'A13', 'Wonbin', 'Tari/Rap'),
-('M25', 'A13', 'Sohee', 'Vokal Utama'),
-('M26', 'A13', 'Anton', 'Vokal'),
-('M27', 'A16', 'James LaBrie', 'Vokal'),
-('M28', 'A16', 'John Petrucci', 'Gitar'),
-('M29', 'A16', 'John Myung', 'Bass'),
-('M30', 'A16', 'Jordan Rudess', 'Keyboard'),
-('M31', 'A16', 'Mike Portnoy', 'Drum'),
-('M32', 'A17', 'Jascha Richter', 'Vokalis/Keyboardist'),
-('M33', 'A17', 'Mikkel Lentz', 'Gitaris'),
-('M34', 'A17', 'Kåre Wanscher', 'Drummer'),
-('M35', 'A23', 'Ian Paice', 'Drum'),
-('M36', 'A23', 'Roger Glover', 'Bass'),
-('M37', 'A23', 'Ian Gillan', 'Vokal'),
-('M38', 'A23', 'Don Airey', 'Keyboard'),
-('M39', 'A23', 'Simon McBride', 'Gitar'),
-('M40', 'A24', 'Bimbim', 'Drum'),
-('M41', 'A24', 'Kaka', 'Vokal'),
-('M42', 'A24', 'Ivanka', 'Bass'),
-('M43', 'A24', 'Ridho', 'Gitar'),
-('M44', 'A24', 'Abdee', 'Gitar'),
-('M45', 'A25', 'Gerard Way', 'Vokalis Utama'),
-('M46', 'A25', 'Ray Toro', 'Gitaris Utama'),
-('M47', 'A25', 'Frank Iero', 'Gitaris Ritme'),
-('M48', 'A25', 'Mikey Way', 'Bassist'),
-('M49', 'A26', 'Winston McCall', 'Vokalis Utama'),
-('M50', 'A26', 'Jeff Ling', 'Gitaris Utama'),
-('M51', 'A26', 'Luke Kilpatrick', 'Gitaris Ritme'),
-('M52', 'A26', 'Ben Gordon', 'Drummer'),
-('M53', 'A26', 'Jia O\'Connor', 'Bassist'),
-('M54', 'A27', 'Jordan Pundik', 'Vokalis Utama'),
-('M55', 'A27', 'Ian Grushka', 'Bass'),
-('M56', 'A27', 'Chad Gilbert', 'Gitaris Utama'),
-('M57', 'A27', 'Cyrus Bolooki', 'Drum'),
-('M58', 'A28', 'Takahiro Moriuchi', 'Vokalis'),
-('M59', 'A28', 'Toru Yamashita', 'Gitaris'),
-('M60', 'A28', 'Ryota Kohama', 'Bassist'),
-('M61', 'A28', 'Tomoya Kanki', 'Drummer'),
-('M62', 'A29', 'Sion', 'Leader/Vokal'),
-('M63', 'A29', 'Riku', 'Rapper Utama'),
-('M64', 'A29', 'Yushi', 'Dancer Utama'),
-('M65', 'A29', 'Jaehee', 'Vokalis Utama'),
-('M66', 'A29', 'Ryo', 'Vokal'),
-('M67', 'A29', 'Sakuya', 'Rapper'),
-('M68', 'A30', 'Ryan Tedder', 'Vokalis/Piano'),
-('M69', 'A30', 'Zach Filkins', 'Gitar/Viola'),
-('M70', 'A30', 'Drew Brown', 'Gitar'),
-('M71', 'A30', 'Brent Kutzle', 'Bass/Cello'),
-('M72', 'A30', 'Eddie Fisher', 'Drum'),
-('M73', 'A30', 'Brian Willett', 'Keyboard/Biola');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `artis`
+-- Table structure for table `artis`
 --
 
 CREATE TABLE `artis` (
-  `id_artis` varchar(10) NOT NULL,
-  `nama_artis` varchar(255) NOT NULL,
-  `genre` varchar(100) DEFAULT NULL,
-  `asal_negara` varchar(100) DEFAULT NULL,
-  `gambar_artis` varchar(255) DEFAULT NULL,
-  `tipe_entitas` varchar(100) DEFAULT NULL,
-  `audio_sample` varchar(255) DEFAULT NULL COMMENT 'Path file MP3 atau URL Spotify/SoundCloud untuk sample lagu artis'
+  `id_artis` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `nama_artis` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `genre` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `asal_negara` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `gambar_artis` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `tipe_entitas` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `audio_sample` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT 'Path file MP3 atau URL Spotify/SoundCloud untuk sample lagu artis'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `artis`
+-- Dumping data for table `artis`
 --
 
 INSERT INTO `artis` (`id_artis`, `nama_artis`, `genre`, `asal_negara`, `gambar_artis`, `tipe_entitas`, `audio_sample`) VALUES
-('A01', 'HYDE', 'J-Rock', 'Jepang', 'band_pict/HYDE.webp', 'Artis Solo (Vokalis/Musisi)', NULL),
+('A01', 'HYDE', 'J-Rock', 'Jepang', '6921a0ff2f9c8.png', 'Artis Solo (Vokalis/Musisi)', '6921a0ff2fd43.mp3'),
 ('A02', 'Ryokuoushoku Shakai', 'J-Pop, Pop Rock', 'Jepang', 'band_pict/Ryokuoushoku_Shaka.webp', 'Grup Band (J-Pop/Rock)', NULL),
 ('A03', 'Hatsune Miku', 'Vocaloid, J-Pop', 'Jepang', 'band_pict/hatsune_miku.webp', 'Entitas Virtual', NULL),
 ('A04', 'L’Impératrice', 'Disco-pop', 'Prancis', 'band_pict/L_Imperatrice.webp', 'Grup Band (Nu-Disco/Pop)', NULL),
@@ -163,31 +71,31 @@ INSERT INTO `artis` (`id_artis`, `nama_artis`, `genre`, `asal_negara`, `gambar_a
 ('A27', 'New Found Glory', 'Pop Punk', 'AS', 'band_pict/new_found_glory.webp', 'Grup Band (Pop-Punk)', NULL),
 ('A28', 'One Ok Rock', 'Rock, J-Rock', 'Jepang', 'band_pict/one_ok_rock.webp', 'Grup Band (J-Rock)', NULL),
 ('A29', 'NCT WISH', 'K-Pop', 'Korea Selatan/Jepang', 'band_pict/nct_wish.webp', 'Grup Idola K-Pop', NULL),
-('A30', 'OneRepublic', 'Pop, Pop Rock', 'AS', 'band_pict/one_republic.webp', 'Grup Band (Pop Rock)', NULL);
+('A30', 'OneRepublic', 'Pop, Pop Rock', 'AS', 'band_pict/one_republic.webp', 'Artis Solo (Vokalis/Musisi)', '');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `konser`
+-- Table structure for table `konser`
 --
 
 CREATE TABLE `konser` (
-  `id_konser` varchar(10) NOT NULL,
-  `nama_konser` varchar(255) NOT NULL,
-  `id_venue` varchar(10) DEFAULT NULL,
+  `id_konser` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `nama_konser` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_venue` varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `tanggal_mulai` datetime DEFAULT NULL,
   `tanggal_selesai` datetime DEFAULT NULL,
-  `deskripsi` text DEFAULT NULL,
-  `harga_tiket_mulai` int(11) DEFAULT NULL,
-  `info_harga_tiket` varchar(255) DEFAULT NULL,
-  `poster_konser` varchar(255) DEFAULT NULL,
-  `video_trailer` varchar(255) DEFAULT NULL COMMENT 'Path file video atau URL YouTube/Vimeo untuk trailer konser',
-  `video_aftermovie` varchar(255) DEFAULT NULL COMMENT 'Path file video atau URL YouTube/Vimeo untuk aftermovie konser',
-  `status_konser` enum('upcoming','ongoing','completed','cancelled') DEFAULT 'upcoming' COMMENT 'Status konser: upcoming=akan datang, ongoing=sedang berlangsung, completed=selesai, cancelled=dibatalkan'
+  `deskripsi` text COLLATE utf8mb4_general_ci,
+  `harga_tiket_mulai` int DEFAULT NULL,
+  `info_harga_tiket` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `poster_konser` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `video_trailer` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT 'Path file video atau URL YouTube/Vimeo untuk trailer konser',
+  `video_aftermovie` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT 'Path file video atau URL YouTube/Vimeo untuk aftermovie konser',
+  `status_konser` enum('upcoming','ongoing','completed','cancelled') COLLATE utf8mb4_general_ci DEFAULT 'upcoming' COMMENT 'Status konser: upcoming=akan datang, ongoing=sedang berlangsung, completed=selesai, cancelled=dibatalkan'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `konser`
+-- Dumping data for table `konser`
 --
 
 INSERT INTO `konser` (`id_konser`, `nama_konser`, `id_venue`, `tanggal_mulai`, `tanggal_selesai`, `deskripsi`, `harga_tiket_mulai`, `info_harga_tiket`, `poster_konser`, `video_trailer`, `video_aftermovie`, `status_konser`) VALUES
@@ -210,23 +118,24 @@ INSERT INTO `konser` (`id_konser`, `nama_konser`, `id_venue`, `tanggal_mulai`, `
 ('K17', 'Bandung Music Run Festival 2026', 'V15', '2026-02-08 00:00:00', '2026-02-08 00:00:00', 'Penyelenggara: EOONLINE', 250000, 'https://schedules.run/VWPq6', NULL, NULL, NULL, 'upcoming'),
 ('K18', 'BANDUNG 90S RUN FESTIVAL 2026', 'V15', '2026-04-19 00:00:00', '2026-04-19 00:00:00', 'Venue TBA Bandung', NULL, 'https://90srun.id/', NULL, NULL, NULL, 'upcoming'),
 ('K19', 'Bandung Color Run Festival 2026', 'V15', '2026-05-17 00:00:00', '2026-05-17 00:00:00', 'Venue TBA Bandung', NULL, 'https://colorrunfestival.id/', NULL, NULL, NULL, 'upcoming'),
-('K20', 'NCT WISH Fan Meeting/Concert', NULL, NULL, NULL, 'TBA 2026', NULL, NULL, NULL, NULL, NULL, 'upcoming'),
-('K21', 'ONEREPUBLIC From Asia, With Love 2026', NULL, NULL, NULL, 'TBA 2026', NULL, NULL, NULL, NULL, NULL, 'upcoming');
+('K20', 'NCT WISH Fan Meeting/Concert', 'V02', '1970-01-01 00:00:00', '1970-01-01 00:00:00', 'TBA 2026', 123, '123', '6921a07b41e2a.jpg', '6921a07b41eb2.mp4', '6921a07b4479b.mp4', 'completed'),
+('K21', 'ONEREPUBLIC From Asia, With Love 2026', 'V02', '1970-01-01 00:00:00', '1970-01-01 00:00:00', 'TBA 2026', 1000000, '123', '69217bbeebb61.webp', '', '', 'completed'),
+('K22', 'pemancingan jaya hore hore hore', 'V10', '2025-11-01 18:24:00', '2025-11-20 18:24:00', 'sadfasdf', 123, '123', '69219d71c2ebf.jpg', '', '', 'completed');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kota`
+-- Table structure for table `kota`
 --
 
 CREATE TABLE `kota` (
-  `id_kota` varchar(10) NOT NULL,
-  `nama_kota` varchar(255) NOT NULL,
-  `id_provinsi` varchar(10) NOT NULL
+  `id_kota` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `nama_kota` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_provinsi` varchar(10) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `kota`
+-- Dumping data for table `kota`
 --
 
 INSERT INTO `kota` (`id_kota`, `nama_kota`, `id_provinsi`) VALUES
@@ -235,23 +144,23 @@ INSERT INTO `kota` (`id_kota`, `nama_kota`, `id_provinsi`) VALUES
 ('C03', 'Tangerang', 'P03'),
 ('C04', 'Tabanan', 'P02'),
 ('C05', 'Solo', 'P04'),
-('C06', 'Bandung', 'P05');
+('C06', 'Bandung', 'P04');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lineup`
+-- Table structure for table `lineup`
 --
 
 CREATE TABLE `lineup` (
-  `id_lineup` varchar(10) NOT NULL,
-  `id_konser` varchar(10) NOT NULL,
-  `id_artis` varchar(10) NOT NULL,
+  `id_lineup` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_konser` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_artis` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
   `jadwal_tampil` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `lineup`
+-- Dumping data for table `lineup`
 --
 
 INSERT INTO `lineup` (`id_lineup`, `id_konser`, `id_artis`, `jadwal_tampil`) VALUES
@@ -289,21 +198,95 @@ INSERT INTO `lineup` (`id_lineup`, `id_konser`, `id_artis`, `jadwal_tampil`) VAL
 ('L32', 'K14', 'A27', NULL),
 ('L33', 'K15', 'A28', NULL),
 ('L34', 'K20', 'A29', NULL),
-('L35', 'K21', 'A30', NULL);
+('L35', 'K21', 'A30', '2025-11-21 19:57:00');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `provinsi`
+-- Table structure for table `log_aktivitas`
+--
+
+CREATE TABLE `log_aktivitas` (
+  `id` int NOT NULL,
+  `admin_nama` varchar(100) NOT NULL,
+  `aksi` varchar(50) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `waktu` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `log_aktivitas`
+--
+
+INSERT INTO `log_aktivitas` (`id`, `admin_nama`, `aksi`, `deskripsi`, `waktu`) VALUES
+(6, 'Admin', 'TAMBAH KONSER', 'Menambah konser: ONEREPUBLIC From Asia, With Love 2026', '2025-11-22 09:06:36'),
+(7, 'Admin System', 'EDIT KONSER', 'Mengubah data konser: ONEREPUBLIC From Asia, With Love 2026 (ID: K22)', '2025-11-22 09:08:25'),
+(8, 'Admin System', 'HAPUS KONSER', 'Menghapus konser: ONEREPUBLIC From Asia, With Love 2026 (ID: K22)', '2025-11-22 09:09:37'),
+(9, 'Admin', 'EDIT USER', 'Edit user: Bahlil Santoso Dongo (U002)', '2025-11-22 09:19:06'),
+(10, 'Admin', 'TAMBAH KONSER', 'Menambah konser: pemancingan jaya hore hore hore', '2025-11-22 10:20:28'),
+(11, 'Admin', 'EDIT KONSER', 'Edit Konser: pemancingan jaya hore hore hore', '2025-11-22 10:21:44'),
+(12, 'Admin', 'HAPUS KONSER', 'Hapus Konser: pemancingan jaya hore hore hore', '2025-11-22 10:22:01'),
+(13, 'Admin', 'TAMBAH USER', 'Menambah User: Bahlil Santoso Dongo 13 (U004)', '2025-11-22 10:30:02'),
+(14, 'Admin', 'HAPUS USER', 'Menghapus user: Bahlil Santoso Dongo (ID: U002)', '2025-11-22 10:30:08'),
+(15, 'Admin', 'EDIT ARTIS', 'Edit Artis: OneRepublic (A30)', '2025-11-22 10:36:39'),
+(16, 'Admin', 'EDIT ARTIS', 'Edit Artis: OneRepublic (A30)', '2025-11-22 10:38:58'),
+(17, 'Admin', 'EDIT ARTIS', 'Edit Artis: OneRepublic (A30)', '2025-11-22 10:42:11'),
+(18, 'Admin', 'EDIT ARTIS', 'Edit Artis: OneRepublic (A30)', '2025-11-22 10:50:27'),
+(19, 'Admin', 'EDIT ARTIS', 'Edit Artis: OneRepublic (A30)', '2025-11-22 10:51:02'),
+(20, 'Admin', 'EDIT ARTIS', 'Edit Artis: OneRepublic (A30)', '2025-11-22 10:51:27'),
+(21, 'Admin', 'TAMBAH KONSER', 'Menambah konser: pemancingan jaya hore hore hore', '2025-11-22 11:24:33'),
+(22, 'Admin', 'EDIT ARTIS', 'Edit Artis: OneRepublic (A30)', '2025-11-22 11:25:37'),
+(23, 'Admin', 'EDIT ARTIS', 'Edit Artis: OneRepublic (A30)', '2025-11-22 11:26:46'),
+(24, 'Admin', 'EDIT ARTIS', 'Edit Artis: OneRepublic (A30)', '2025-11-22 11:27:23'),
+(25, 'Admin', 'EDIT ARTIS', 'Edit Artis: OneRepublic (A30)', '2025-11-22 11:27:57'),
+(26, 'Admin', 'EDIT ARTIS', 'Edit Artis: HYDE (A01)', '2025-11-22 11:35:24'),
+(27, 'Admin', 'EDIT ARTIS', 'Edit Artis: HYDE (A01)', '2025-11-22 11:35:44'),
+(28, 'Admin', 'EDIT KONSER', 'Edit Konser: NCT WISH Fan Meeting/Concert', '2025-11-22 11:37:31'),
+(29, 'Admin', 'EDIT ARTIS', 'Edit Artis: HYDE (A01)', '2025-11-22 11:39:43'),
+(30, 'Admin', 'EDIT KOTA', 'Edit Kota: Bandung', '2025-11-22 11:49:24'),
+(31, 'Admin', 'EDIT VENUE', 'Edit Venue: TBA Bandung (V15)', '2025-11-22 11:57:39'),
+(32, 'Admin', 'TAMBAH VENUE', 'Tambah Venue: Kemayoran (V16)', '2025-11-22 12:03:49'),
+(33, 'Admin', 'TAMBAH PROVINSI', 'Tambah: mancing', '2025-11-22 12:06:44'),
+(34, 'Admin', 'EDIT PROVINSI', 'Edit: mancing12', '2025-11-22 12:06:55'),
+(35, 'Admin', 'TAMBAH SETLIST', 'Tambah Lagu: hisyam mancing', '2025-11-22 12:43:30'),
+(36, 'Admin', 'TAMBAH SETLIST', 'Tambah Lagu: hisyam mancing (SET022)', '2025-11-22 12:47:10'),
+(37, 'Admin', 'TAMBAH SETLIST', 'Tambah Lagu: hisyam mancing (SET023)', '2025-11-22 12:49:21'),
+(38, 'Admin', 'HAPUS SETLIST', 'Hapus Lagu: hisyam mancing', '2025-11-22 12:49:37'),
+(39, 'Admin', 'HAPUS SETLIST', 'Hapus Lagu: hisyam mancing', '2025-11-22 12:49:42'),
+(40, 'Admin', 'HAPUS WISHLIST', 'Menghapus wishlist: Konser 2025-26 aespa LIVE TOUR dari user Admin System (ID: W006)', '2025-11-22 12:53:21'),
+(41, 'Admin', 'HAPUS WISHLIST', 'Menghapus wishlist: Konser BANDUNG 90S RUN FESTIVAL 2026 dari user Admin System (ID: W006)', '2025-11-22 12:54:14'),
+(42, 'Admin', 'HAPUS WISHLIST', 'Menghapus wishlist: Konser Djakarta Warehouse Project 2025 dari user Bahlil Santoso Dongo 13 (ID: W006)', '2025-11-22 12:55:06'),
+(43, 'Admin', 'TAMBAH WISHLIST', 'Menambahkan konser BANDUNG 90S RUN FESTIVAL 2026 ke wishlist Bahlil Santoso Dongo 13 (ID: W006)', '2025-11-22 12:56:01'),
+(44, 'Admin', 'EDIT WISHLIST', 'Mengubah wishlist ID W006 menjadi: Bandung Music Run Festival 2026 (User: Bahlil Santoso Dongo 13)', '2025-11-22 12:56:05'),
+(45, 'Admin', 'HAPUS WISHLIST', 'Menghapus wishlist: Konser Bandung Music Run Festival 2026 dari user Bahlil Santoso Dongo 13 (ID: W006)', '2025-11-22 12:56:08'),
+(46, 'Admin', 'EDIT SETLIST', 'Edit Lagu: Peur des filles', '2025-11-22 12:56:19'),
+(47, 'Admin', 'EDIT LINEUP', 'Edit LineUp ID: L35', '2025-11-22 12:57:50'),
+(48, 'Admin', 'TAMBAH LINEUP', 'Tambah LineUp ID: L036', '2025-11-22 12:58:50'),
+(49, 'Admin', 'EDIT LINEUP', 'Edit LineUp ID: L036', '2025-11-22 12:59:16'),
+(50, 'Admin', 'HAPUS LINEUP', 'Hapus LineUp ID: L036', '2025-11-22 12:59:23'),
+(51, 'Admin', 'TAMBAH PROVINSI', 'Tambah: mancing', '2025-11-22 12:59:34'),
+(52, 'Admin', 'EDIT PROVINSI', 'Edit: mancing12', '2025-11-22 12:59:42'),
+(53, 'Admin', 'HAPUS PROVINSI', 'Menghapus Provinsi: mancing12 (ID: P06)', '2025-11-22 12:59:45'),
+(54, 'Admin', 'TAMBAH KOTA', 'Tambah Kota: Bandung (C07)', '2025-11-22 13:01:38'),
+(55, 'Admin', 'EDIT KOTA', 'Edit Kota: Bandung', '2025-11-22 13:01:46'),
+(56, 'Admin', 'HAPUS KOTA', 'Hapus Kota: Bandung', '2025-11-22 13:01:51'),
+(57, 'Admin', 'EDIT VENUE', 'Edit Venue: Kemayoran (V16)', '2025-11-22 13:02:06'),
+(58, 'Admin', 'TAMBAH VENUE', 'Tambah Venue: asdf (V17)', '2025-11-22 13:02:28'),
+(59, 'Admin', 'HAPUS VENUE', 'Hapus Venue: asdf (V17)', '2025-11-22 13:02:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `provinsi`
 --
 
 CREATE TABLE `provinsi` (
-  `id_provinsi` varchar(10) NOT NULL,
-  `nama_provinsi` varchar(255) NOT NULL
+  `id_provinsi` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `nama_provinsi` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `provinsi`
+-- Dumping data for table `provinsi`
 --
 
 INSERT INTO `provinsi` (`id_provinsi`, `nama_provinsi`) VALUES
@@ -316,26 +299,26 @@ INSERT INTO `provinsi` (`id_provinsi`, `nama_provinsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `setlist_konser`
+-- Table structure for table `setlist_konser`
 --
 
 CREATE TABLE `setlist_konser` (
-  `id_setlist` varchar(10) NOT NULL,
-  `id_konser` varchar(10) NOT NULL,
-  `id_artis` varchar(10) NOT NULL,
-  `judul_lagu` varchar(255) NOT NULL,
-  `durasi` varchar(10) DEFAULT NULL COMMENT 'Durasi lagu format MM:SS contoh: 03:45',
-  `urutan` int(11) NOT NULL COMMENT 'Urutan lagu dalam konser (1, 2, 3, dst)',
-  `audio_file` varchar(255) DEFAULT NULL COMMENT 'Path file MP3 atau URL Spotify/SoundCloud',
-  `keterangan` text DEFAULT NULL COMMENT 'Keterangan tambahan (misal: opening song, encore, dll)'
+  `id_setlist` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_konser` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_artis` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `judul_lagu` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `durasi` varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT 'Durasi lagu format MM:SS contoh: 03:45',
+  `urutan` int NOT NULL COMMENT 'Urutan lagu dalam konser (1, 2, 3, dst)',
+  `audio_file` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT 'Path file MP3 atau URL Spotify/SoundCloud',
+  `keterangan` text COLLATE utf8mb4_general_ci COMMENT 'Keterangan tambahan (misal: opening song, encore, dll)'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `setlist_konser`
+-- Dumping data for table `setlist_konser`
 --
 
 INSERT INTO `setlist_konser` (`id_setlist`, `id_konser`, `id_artis`, `judul_lagu`, `durasi`, `urutan`, `audio_file`, `keterangan`) VALUES
-('SET001', 'K04', 'A04', 'Peur des filles', '03:24', 1, NULL, 'Opening Song - L\'Impératrice'),
+('SET001', 'K04', 'A04', 'Peur des filles', '03:25', 1, '', 'Opening Song - L\'Impératrice'),
 ('SET002', 'K04', 'A04', 'Agitations tropicales', '03:45', 2, NULL, NULL),
 ('SET003', 'K04', 'A04', 'Tant dâ€™amour perdu', '04:12', 3, NULL, NULL),
 ('SET004', 'K04', 'A05', 'Lovers Rock', '03:34', 4, NULL, 'Opening Song - TV Girl'),
@@ -354,51 +337,52 @@ INSERT INTO `setlist_konser` (`id_setlist`, `id_konser`, `id_artis`, `judul_lagu
 ('SET017', 'K12', 'A22', 'Spicy', '02:58', 3, NULL, NULL),
 ('SET018', 'K12', 'A22', 'Next Level', '03:30', 4, NULL, NULL),
 ('SET019', 'K12', 'A22', 'Savage', '03:58', 5, NULL, NULL),
-('SET020', 'K12', 'A22', 'Black Mamba', '02:56', 6, NULL, 'Encore');
+('SET020', 'K12', 'A22', 'Black Mamba', '02:56', 6, NULL, 'Encore'),
+('SET023', 'K12', 'A06', 'hisyam mancing', '12', 1, '6921b15179308.mp3', 'sdf');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
-  `id_user` varchar(10) NOT NULL,
-  `nama_lengkap` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL COMMENT 'Password plain text untuk pembelajaran',
-  `no_telepon` varchar(20) DEFAULT NULL,
-  `role` enum('user','admin') DEFAULT 'user',
-  `tanggal_daftar` timestamp NULL DEFAULT current_timestamp(),
-  `status_akun` enum('active','inactive','suspended') DEFAULT 'active'
+  `id_user` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `nama_lengkap` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL COMMENT 'Password plain text untuk pembelajaran',
+  `no_telepon` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `role` enum('user','admin') COLLATE utf8mb4_general_ci DEFAULT 'user',
+  `tanggal_daftar` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `status_akun` enum('active','inactive','suspended') COLLATE utf8mb4_general_ci DEFAULT 'active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id_user`, `nama_lengkap`, `email`, `password`, `no_telepon`, `role`, `tanggal_daftar`, `status_akun`) VALUES
 ('U001', 'Admin System', 'admin@concertix.com', 'admin123', '081234567890', 'admin', '2025-11-12 01:50:50', 'active'),
-('U002', 'Bahlil Santoso', 'bahlil@gmail.com', 'pertaminarugi', '081298765432', 'user', '2025-11-12 01:50:50', 'active'),
-('U003', 'Puan Nurhaliza', 'puan@gmail.com', 'dprturu', '081234567891', 'user', '2025-11-12 01:50:50', 'active');
+('U003', 'Puan Nurhaliza', 'puan@gmail.com', 'dprturu', '081234567891', 'user', '2025-11-12 01:50:50', 'active'),
+('U004', 'Bahlil Santoso Dongo 13', 'john@email.com', '123123', '089655705151', 'user', '2025-11-22 10:30:02', 'active');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `venue`
+-- Table structure for table `venue`
 --
 
 CREATE TABLE `venue` (
-  `id_venue` varchar(10) NOT NULL,
-  `nama_venue` varchar(255) NOT NULL,
-  `alamat_lengkap` text DEFAULT NULL,
-  `id_kota` varchar(10) NOT NULL,
-  `kapasitas` int(11) DEFAULT NULL,
-  `url_website` varchar(255) NOT NULL
+  `id_venue` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `nama_venue` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `alamat_lengkap` text COLLATE utf8mb4_general_ci,
+  `id_kota` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `kapasitas` int DEFAULT NULL,
+  `url_website` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `venue`
+-- Dumping data for table `venue`
 --
 
 INSERT INTO `venue` (`id_venue`, `nama_venue`, `alamat_lengkap`, `id_kota`, `kapasitas`, `url_website`) VALUES
@@ -416,29 +400,27 @@ INSERT INTO `venue` (`id_venue`, `nama_venue`, `alamat_lengkap`, `id_kota`, `kap
 ('V12', 'NICE, PIK2', '', 'C03', NULL, ''),
 ('V13', 'Beach City International Stadium', '', 'C01', 15000, ''),
 ('V14', 'Jiexpo Kemayoran', '', 'C01', NULL, ''),
-('V15', 'TBA Bandung', '', 'C06', NULL, '');
+('V15', 'TBA Bandung', '', 'C06', 100000, ''),
+('V16', 'Kemayoran', '', 'C02', 12, '');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wishlist`
+-- Table structure for table `wishlist`
 --
 
 CREATE TABLE `wishlist` (
-  `id_wishlist` varchar(10) NOT NULL,
-  `id_user` varchar(10) NOT NULL,
-  `id_konser` varchar(10) NOT NULL,
-  `tanggal_ditambahkan` timestamp NULL DEFAULT current_timestamp() COMMENT 'Tanggal user menambahkan konser ke wishlist'
+  `id_wishlist` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_user` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_konser` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `tanggal_ditambahkan` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Tanggal user menambahkan konser ke wishlist'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `wishlist`
+-- Dumping data for table `wishlist`
 --
 
 INSERT INTO `wishlist` (`id_wishlist`, `id_user`, `id_konser`, `tanggal_ditambahkan`) VALUES
-('W001', 'U002', 'K06', '2025-11-13 02:40:31'),
-('W002', 'U002', 'K12', '2025-11-13 02:40:31'),
-('W003', 'U002', 'K04', '2025-11-13 02:40:31'),
 ('W004', 'U003', 'K15', '2025-11-13 02:40:31'),
 ('W005', 'U003', 'K14', '2025-11-13 02:40:31');
 
@@ -447,34 +429,27 @@ INSERT INTO `wishlist` (`id_wishlist`, `id_user`, `id_konser`, `tanggal_ditambah
 --
 
 --
--- Indeks untuk tabel `anggota_band`
---
-ALTER TABLE `anggota_band`
-  ADD PRIMARY KEY (`id_anggota`),
-  ADD KEY `idx_id_artis` (`id_artis`);
-
---
--- Indeks untuk tabel `artis`
+-- Indexes for table `artis`
 --
 ALTER TABLE `artis`
   ADD PRIMARY KEY (`id_artis`);
 
 --
--- Indeks untuk tabel `konser`
+-- Indexes for table `konser`
 --
 ALTER TABLE `konser`
   ADD PRIMARY KEY (`id_konser`),
   ADD KEY `idx_id_venue` (`id_venue`);
 
 --
--- Indeks untuk tabel `kota`
+-- Indexes for table `kota`
 --
 ALTER TABLE `kota`
   ADD PRIMARY KEY (`id_kota`),
   ADD KEY `idx_id_provinsi` (`id_provinsi`);
 
 --
--- Indeks untuk tabel `lineup`
+-- Indexes for table `lineup`
 --
 ALTER TABLE `lineup`
   ADD PRIMARY KEY (`id_lineup`),
@@ -483,13 +458,19 @@ ALTER TABLE `lineup`
   ADD KEY `idx_id_artis` (`id_artis`);
 
 --
--- Indeks untuk tabel `provinsi`
+-- Indexes for table `log_aktivitas`
+--
+ALTER TABLE `log_aktivitas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `provinsi`
 --
 ALTER TABLE `provinsi`
   ADD PRIMARY KEY (`id_provinsi`);
 
 --
--- Indeks untuk tabel `setlist_konser`
+-- Indexes for table `setlist_konser`
 --
 ALTER TABLE `setlist_konser`
   ADD PRIMARY KEY (`id_setlist`),
@@ -498,7 +479,7 @@ ALTER TABLE `setlist_konser`
   ADD KEY `idx_urutan` (`urutan`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
@@ -507,14 +488,14 @@ ALTER TABLE `users`
   ADD KEY `idx_email` (`email`);
 
 --
--- Indeks untuk tabel `venue`
+-- Indexes for table `venue`
 --
 ALTER TABLE `venue`
   ADD PRIMARY KEY (`id_venue`),
   ADD KEY `idx_id_kota` (`id_kota`);
 
 --
--- Indeks untuk tabel `wishlist`
+-- Indexes for table `wishlist`
 --
 ALTER TABLE `wishlist`
   ADD PRIMARY KEY (`id_wishlist`),
@@ -523,49 +504,53 @@ ALTER TABLE `wishlist`
   ADD KEY `idx_id_konser` (`id_konser`);
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `anggota_band`
+-- AUTO_INCREMENT for table `log_aktivitas`
 --
-ALTER TABLE `anggota_band`
-  ADD CONSTRAINT `Anggota_Band_ibfk_1_new` FOREIGN KEY (`id_artis`) REFERENCES `artis` (`id_artis`);
+ALTER TABLE `log_aktivitas`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- Ketidakleluasaan untuk tabel `konser`
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `konser`
 --
 ALTER TABLE `konser`
   ADD CONSTRAINT `Konser_ibfk_1_new` FOREIGN KEY (`id_venue`) REFERENCES `venue` (`id_venue`);
 
 --
--- Ketidakleluasaan untuk tabel `kota`
+-- Constraints for table `kota`
 --
 ALTER TABLE `kota`
   ADD CONSTRAINT `Kota_ibfk_1_new` FOREIGN KEY (`id_provinsi`) REFERENCES `provinsi` (`id_provinsi`);
 
 --
--- Ketidakleluasaan untuk tabel `lineup`
+-- Constraints for table `lineup`
 --
 ALTER TABLE `lineup`
   ADD CONSTRAINT `Lineup_ibfk_1_new` FOREIGN KEY (`id_konser`) REFERENCES `konser` (`id_konser`),
   ADD CONSTRAINT `Lineup_ibfk_2_new` FOREIGN KEY (`id_artis`) REFERENCES `artis` (`id_artis`);
 
 --
--- Ketidakleluasaan untuk tabel `setlist_konser`
+-- Constraints for table `setlist_konser`
 --
 ALTER TABLE `setlist_konser`
   ADD CONSTRAINT `Setlist_Konser_ibfk_1` FOREIGN KEY (`id_konser`) REFERENCES `konser` (`id_konser`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `Setlist_Konser_ibfk_2` FOREIGN KEY (`id_artis`) REFERENCES `artis` (`id_artis`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `venue`
+-- Constraints for table `venue`
 --
 ALTER TABLE `venue`
   ADD CONSTRAINT `Venue_ibfk_1_new` FOREIGN KEY (`id_kota`) REFERENCES `kota` (`id_kota`);
 
 --
--- Ketidakleluasaan untuk tabel `wishlist`
+-- Constraints for table `wishlist`
 --
 ALTER TABLE `wishlist`
   ADD CONSTRAINT `Wishlist_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
